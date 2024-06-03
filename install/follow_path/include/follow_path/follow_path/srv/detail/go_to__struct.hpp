@@ -1,1 +1,0 @@
-/home/alvaro/github.com/turtlesim-follow-path/build/follow_path/rosidl_generator_cpp/follow_path/srv/detail/go_to__struct.hpp

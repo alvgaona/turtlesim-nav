@@ -1,1 +1,0 @@
-/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh

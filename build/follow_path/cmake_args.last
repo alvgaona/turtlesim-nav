@@ -1,1 +1,0 @@
-['-G', 'Ninja', '-DPython_EXECUTABLE=/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/python', '-DPython3_EXECUTABLE=/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/python', '-DAMENT_CMAKE_SYMLINK_INSTALL=1']

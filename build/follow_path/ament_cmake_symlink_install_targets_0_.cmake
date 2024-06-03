@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/alvaro/github.com/turtlesim-follow-path/build/follow_path/rosidl_generator_py/follow_path/follow_path_s__rosidl_typesupport_fastrtps_c.cpython-311-x86_64-linux-gnu.so" "TARGETS" "follow_path__rosidl_typesupport_fastrtps_c__pyext" "DESTINATION" "lib/python3.11/site-packages/follow_path")
