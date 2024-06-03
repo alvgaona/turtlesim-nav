@@ -1,0 +1,649 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "libfollow_path__rosidl_typesupport_fastrtps_c.so"
+		}
+	],
+	"backtrace" : 5,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"include",
+			"ament_execute_extensions",
+			"rosidl_generate_interfaces",
+			"install",
+			"target_link_libraries",
+			"set_target_properties",
+			"find_package",
+			"add_compile_options",
+			"add_definitions",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_typesupport_fastrtps_c/cmake/rosidl_typesupport_fastrtps_c_generate_interfaces.cmake",
+			"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake",
+			"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake",
+			"CMakeLists.txt",
+			"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_typesupport_fastrtps_cpp/cmake/rosidl_typesupport_fastrtps_cppExport.cmake",
+			"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_typesupport_fastrtps_cpp/cmake/ament_cmake_export_targets-extras.cmake",
+			"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_typesupport_fastrtps_cpp/cmake/rosidl_typesupport_fastrtps_cppConfig.cmake",
+			"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/builtin_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake",
+			"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/builtin_interfaces/cmake/builtin_interfacesConfig.cmake",
+			"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/libstatistics_collector/cmake/ament_cmake_export_dependencies-extras.cmake",
+			"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/libstatistics_collector/cmake/libstatistics_collectorConfig.cmake",
+			"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rclcpp/cmake/ament_cmake_export_dependencies-extras.cmake",
+			"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rclcpp/cmake/rclcppConfig.cmake",
+			"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_generator_c/cmake/rosidl_generator_c_generate_interfaces.cmake",
+			"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_runtime_c/cmake/rosidl_runtime_cExport.cmake",
+			"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_runtime_c/cmake/ament_cmake_export_targets-extras.cmake",
+			"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake",
+			"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rcutils/cmake/rcutilsExport.cmake",
+			"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rcutils/cmake/ament_cmake_export_targets-extras.cmake",
+			"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rcutils/cmake/rcutilsConfig.cmake",
+			"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake",
+			"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/ament_cmake_ros/cmake/ament_cmake_ros-extras.cmake",
+			"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/ament_cmake_ros/cmake/ament_cmake_rosConfig.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 3,
+				"line" : 28,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 286,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 48,
+				"parent" : 2
+			},
+			{
+				"file" : 0,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 104,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 167,
+				"parent" : 4
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 131,
+				"parent" : 4
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 141,
+				"parent" : 4
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 141,
+				"parent" : 4
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 141,
+				"parent" : 4
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 115,
+				"parent" : 4
+			},
+			{
+				"command" : 7,
+				"file" : 3,
+				"line" : 16,
+				"parent" : 0
+			},
+			{
+				"file" : 12,
+				"parent" : 12
+			},
+			{
+				"command" : 1,
+				"file" : 12,
+				"line" : 41,
+				"parent" : 13
+			},
+			{
+				"file" : 11,
+				"parent" : 14
+			},
+			{
+				"command" : 7,
+				"file" : 11,
+				"line" : 21,
+				"parent" : 15
+			},
+			{
+				"file" : 10,
+				"parent" : 16
+			},
+			{
+				"command" : 1,
+				"file" : 10,
+				"line" : 41,
+				"parent" : 17
+			},
+			{
+				"file" : 9,
+				"parent" : 18
+			},
+			{
+				"command" : 7,
+				"file" : 9,
+				"line" : 21,
+				"parent" : 19
+			},
+			{
+				"file" : 8,
+				"parent" : 20
+			},
+			{
+				"command" : 1,
+				"file" : 8,
+				"line" : 41,
+				"parent" : 21
+			},
+			{
+				"file" : 7,
+				"parent" : 22
+			},
+			{
+				"command" : 7,
+				"file" : 7,
+				"line" : 21,
+				"parent" : 23
+			},
+			{
+				"file" : 6,
+				"parent" : 24
+			},
+			{
+				"command" : 1,
+				"file" : 6,
+				"line" : 41,
+				"parent" : 25
+			},
+			{
+				"file" : 5,
+				"parent" : 26
+			},
+			{
+				"command" : 1,
+				"file" : 5,
+				"line" : 9,
+				"parent" : 27
+			},
+			{
+				"file" : 4,
+				"parent" : 28
+			},
+			{
+				"command" : 6,
+				"file" : 4,
+				"line" : 61,
+				"parent" : 29
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 48,
+				"parent" : 2
+			},
+			{
+				"file" : 13,
+				"parent" : 31
+			},
+			{
+				"command" : 5,
+				"file" : 13,
+				"line" : 132,
+				"parent" : 32
+			},
+			{
+				"command" : 5,
+				"file" : 13,
+				"line" : 132,
+				"parent" : 32
+			},
+			{
+				"command" : 5,
+				"file" : 13,
+				"line" : 132,
+				"parent" : 32
+			},
+			{
+				"command" : 7,
+				"file" : 7,
+				"line" : 21,
+				"parent" : 23
+			},
+			{
+				"file" : 16,
+				"parent" : 36
+			},
+			{
+				"command" : 1,
+				"file" : 16,
+				"line" : 41,
+				"parent" : 37
+			},
+			{
+				"file" : 15,
+				"parent" : 38
+			},
+			{
+				"command" : 1,
+				"file" : 15,
+				"line" : 9,
+				"parent" : 39
+			},
+			{
+				"file" : 14,
+				"parent" : 40
+			},
+			{
+				"command" : 6,
+				"file" : 14,
+				"line" : 61,
+				"parent" : 41
+			},
+			{
+				"command" : 1,
+				"file" : 16,
+				"line" : 41,
+				"parent" : 37
+			},
+			{
+				"file" : 20,
+				"parent" : 43
+			},
+			{
+				"command" : 7,
+				"file" : 20,
+				"line" : 21,
+				"parent" : 44
+			},
+			{
+				"file" : 19,
+				"parent" : 45
+			},
+			{
+				"command" : 1,
+				"file" : 19,
+				"line" : 41,
+				"parent" : 46
+			},
+			{
+				"file" : 18,
+				"parent" : 47
+			},
+			{
+				"command" : 1,
+				"file" : 18,
+				"line" : 9,
+				"parent" : 48
+			},
+			{
+				"file" : 17,
+				"parent" : 49
+			},
+			{
+				"command" : 6,
+				"file" : 17,
+				"line" : 61,
+				"parent" : 50
+			},
+			{
+				"command" : 8,
+				"file" : 3,
+				"line" : 12,
+				"parent" : 0
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 21,
+				"parent" : 4
+			},
+			{
+				"file" : 22,
+				"parent" : 53
+			},
+			{
+				"command" : 1,
+				"file" : 22,
+				"line" : 41,
+				"parent" : 54
+			},
+			{
+				"file" : 21,
+				"parent" : 55
+			},
+			{
+				"command" : 9,
+				"file" : 21,
+				"line" : 25,
+				"parent" : 56
+			},
+			{
+				"command" : 10,
+				"file" : 0,
+				"line" : 134,
+				"parent" : 4
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 110,
+				"parent" : 4
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include -g -std=gnu++14 -fPIC -fdiagnostics-color=always"
+				},
+				{
+					"backtrace" : 52,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 52,
+					"fragment" : "-Wextra"
+				},
+				{
+					"backtrace" : 52,
+					"fragment" : "-Wpedantic"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"define" : "ROSIDL_TYPESUPPORT_FASTRTPS_C_BUILDING_DLL_follow_path"
+				},
+				{
+					"backtrace" : 57,
+					"define" : "ROS_PACKAGE_NAME=\"follow_path\""
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 58,
+					"path" : "/home/alvaro/github.com/turtlesim-follow-path/src/follow-path/cmake-build-debug/rosidl_typesupport_fastrtps_c"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "/home/alvaro/github.com/turtlesim-follow-path/src/follow-path/cmake-build-debug/rosidl_generator_c"
+				},
+				{
+					"backtrace" : 11,
+					"isSystem" : true,
+					"path" : "/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/rosidl_runtime_c"
+				},
+				{
+					"backtrace" : 11,
+					"isSystem" : true,
+					"path" : "/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/rcutils"
+				},
+				{
+					"backtrace" : 11,
+					"isSystem" : true,
+					"path" : "/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/rosidl_typesupport_interface"
+				},
+				{
+					"backtrace" : 11,
+					"isSystem" : true,
+					"path" : "/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/rosidl_runtime_cpp"
+				},
+				{
+					"backtrace" : 11,
+					"isSystem" : true,
+					"path" : "/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/rosidl_typesupport_fastrtps_cpp"
+				},
+				{
+					"backtrace" : 11,
+					"isSystem" : true,
+					"path" : "/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/rmw"
+				},
+				{
+					"backtrace" : 11,
+					"isSystem" : true,
+					"path" : "/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/rosidl_typesupport_fastrtps_c"
+				},
+				{
+					"backtrace" : 7,
+					"isSystem" : true,
+					"path" : "/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/geometry_msgs"
+				},
+				{
+					"backtrace" : 7,
+					"isSystem" : true,
+					"path" : "/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/std_msgs"
+				},
+				{
+					"backtrace" : 7,
+					"isSystem" : true,
+					"path" : "/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/builtin_interfaces"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					59
+				],
+				"standard" : "14"
+			},
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 7,
+			"id" : "follow_path__rosidl_generator_c::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "follow_path__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 6,
+				"path" : "lib"
+			},
+			{
+				"backtrace" : 6,
+				"path" : "lib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/usr/local"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/lib -Wl,-rpath-link,/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/lib -L/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/lib",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/home/alvaro/github.com/turtlesim-follow-path/src/follow-path/cmake-build-debug:",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "libfollow_path__rosidl_generator_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 10,
+				"fragment" : "/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/lib/librosidl_typesupport_fastrtps_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/lib/libfastcdr.so.1.0.24",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 30,
+				"fragment" : "/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/lib/librmw.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/lib/librosidl_typesupport_fastrtps_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 33,
+				"fragment" : "/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/lib/libgeometry_msgs__rosidl_generator_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 34,
+				"fragment" : "/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/lib/libstd_msgs__rosidl_generator_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 35,
+				"fragment" : "/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/lib/libbuiltin_interfaces__rosidl_generator_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/lib/librosidl_runtime_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 42,
+				"fragment" : "/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/lib/librcutils.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 51,
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 51,
+				"fragment" : "-lrt",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "follow_path__rosidl_typesupport_fastrtps_c",
+	"nameOnDisk" : "libfollow_path__rosidl_typesupport_fastrtps_c.so",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 5,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/rosidl_typesupport_fastrtps_c/follow_path/srv/detail/go_to__rosidl_typesupport_fastrtps_c.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/rosidl_typesupport_fastrtps_c/follow_path/srv/detail/go_to__type_support_c.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/rosidl_typesupport_fastrtps_c/follow_path/srv/detail/go_to__rosidl_typesupport_fastrtps_c.h.rule",
+			"sourceGroupIndex" : 2
+		}
+	],
+	"type" : "SHARED_LIBRARY"
+}

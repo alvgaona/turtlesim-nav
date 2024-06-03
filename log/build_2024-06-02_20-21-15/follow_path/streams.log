@@ -1,0 +1,71 @@
+[0.007s] Invoking command in '/home/alvaro/github.com/turtlesim-follow-path/build/follow_path': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PIXI_PROMPT=(turtlesim-follow-path) /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/cmake /home/alvaro/github.com/turtlesim-follow-path/src/follow-path -G Ninja -DPython_EXECUTABLE=/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/python -DPython3_EXECUTABLE=/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/python -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/alvaro/github.com/turtlesim-follow-path/install/follow_path
+[0.043s] -- The C compiler identification is GNU 12.3.0
+[0.096s] -- The CXX compiler identification is GNU 12.3.0
+[0.108s] -- Detecting C compiler ABI info
+[0.148s] -- Detecting C compiler ABI info - done
+[0.158s] -- Check for working C compiler: /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/x86_64-conda-linux-gnu-cc - skipped
+[0.158s] -- Detecting C compile features
+[0.159s] -- Detecting C compile features - done
+[0.166s] -- Detecting CXX compiler ABI info
+[0.213s] -- Detecting CXX compiler ABI info - done
+[0.224s] -- Check for working CXX compiler: /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/x86_64-conda-linux-gnu-c++ - skipped
+[0.224s] -- Detecting CXX compile features
+[0.224s] -- Detecting CXX compile features - done
+[0.228s] -- Found ament_cmake: 1.3.7 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/ament_cmake/cmake)
+[0.297s] -- Found Python3: /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/python (found version "3.11.8") found components: Interpreter 
+[0.344s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.384s] -- Found rclcpp: 16.0.8 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rclcpp/cmake)
+[0.433s] -- Found rosidl_generator_c: 3.1.5 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_generator_c/cmake)
+[0.440s] -- Found rosidl_adapter: 3.1.5 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_adapter/cmake)
+[0.450s] -- Found rosidl_generator_cpp: 3.1.5 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_generator_cpp/cmake)
+[0.467s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.493s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.604s] -- Checking for module 'yaml-0.1'
+[0.655s] --   Found yaml-0.1, version 0.2.5
+[0.797s] -- Found rmw_implementation_cmake: 6.1.1 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rmw_implementation_cmake/cmake)
+[0.801s] -- Found rmw_fastrtps_cpp: 6.2.6 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rmw_fastrtps_cpp/cmake)
+[1.078s] -- Found OpenSSL: /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/lib/libcrypto.so (found version "3.3.0")  
+[1.100s] -- Found FastRTPS: /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include  
+[1.142s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.152s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.191s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.191s] -- Looking for pthread_create in pthreads
+[1.218s] -- Looking for pthread_create in pthreads - not found
+[1.218s] -- Looking for pthread_create in pthread
+[1.255s] -- Looking for pthread_create in pthread - found
+[1.256s] -- Found Threads: TRUE  
+[1.382s] -- Found std_msgs: 4.2.3 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/std_msgs/cmake)
+[1.420s] -- Found sensor_msgs: 4.2.3 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/sensor_msgs/cmake)
+[1.550s] -- Found rosidl_default_generators: 1.2.0 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_default_generators/cmake)
+[1.851s] -- Found Python3: /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/python3.11 (found version "3.11.8") found components: Development NumPy Interpreter Development.Module Development.Embed 
+[1.859s] -- Found ament_lint_auto: 0.12.10 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/ament_lint_auto/cmake)
+[1.944s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.945s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/alvaro/github.com/turtlesim-follow-path/src/follow-path/include>
+[1.945s] -- Configured cppcheck exclude dirs and/or files: 
+[1.945s] -- Added test 'lint_cmake' to check CMake code style
+[1.946s] -- Added test 'uncrustify' to check C / C++ code style
+[1.946s] -- Configured uncrustify additional arguments: 
+[1.946s] -- Added test 'xmllint' to check XML markup files
+[1.948s] -- Configuring done (1.9s)
+[1.951s] -- Generating done (0.0s)
+[1.958s] [33mCMake Warning:
+[1.959s]   Manually-specified variables were not used by the project:
+[1.959s] 
+[1.959s]     Python_EXECUTABLE
+[1.959s] 
+[1.959s] [0m
+[1.959s] -- Build files have been written to: /home/alvaro/github.com/turtlesim-follow-path/build/follow_path
+[1.968s] Invoked command in '/home/alvaro/github.com/turtlesim-follow-path/build/follow_path' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PIXI_PROMPT=(turtlesim-follow-path) /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/cmake /home/alvaro/github.com/turtlesim-follow-path/src/follow-path -G Ninja -DPython_EXECUTABLE=/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/python -DPython3_EXECUTABLE=/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/python -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/alvaro/github.com/turtlesim-follow-path/install/follow_path
+[1.968s] Invoking command in '/home/alvaro/github.com/turtlesim-follow-path/build/follow_path': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PIXI_PROMPT=(turtlesim-follow-path) /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/cmake --build /home/alvaro/github.com/turtlesim-follow-path/build/follow_path -- -j20 -l20
+[1.974s] 
+[1.980s] [0/2] Building CXX object CMakeFiles/follow_path_node.dir/src/follow_path_node.cpp.o[K
+[1.980s] [1/2] Building CXX object CMakeFiles/follow_path_node.dir/src/follow_path_node.cpp.o[K
+[1.980s] [31mFAILED: [0mCMakeFiles/follow_path_node.dir/src/follow_path_node.cpp.o 
+[1.980s] /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/x86_64-conda-linux-gnu-c++  -I/home/alvaro/github.com/turtlesim-follow-path/src/follow-path/include -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include -std=gnu++20 -Wall -Wextra -Wpedantic -MD -MT CMakeFiles/follow_path_node.dir/src/follow_path_node.cpp.o -MF CMakeFiles/follow_path_node.dir/src/follow_path_node.cpp.o.d -o CMakeFiles/follow_path_node.dir/src/follow_path_node.cpp.o -c /home/alvaro/github.com/turtlesim-follow-path/src/follow-path/src/follow_path_node.cpp
+[1.980s] In file included from /home/alvaro/github.com/turtlesim-follow-path/src/follow-path/src/follow_path_node.cpp:1:
+[1.980s] /home/alvaro/github.com/turtlesim-follow-path/src/follow-path/include/follow_path_node.h:3:10: fatal error: rclcpp/rclcpp.hpp: No such file or directory
+[1.981s]     3 | #include "rclcpp/rclcpp.hpp"
+[1.981s]       |          ^~~~~~~~~~~~~~~~~~~
+[1.981s] compilation terminated.
+[1.981s] ninja: build stopped: subcommand failed.
+[1.981s] Invoked command in '/home/alvaro/github.com/turtlesim-follow-path/build/follow_path' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PIXI_PROMPT=(turtlesim-follow-path) /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/cmake --build /home/alvaro/github.com/turtlesim-follow-path/build/follow_path -- -j20 -l20

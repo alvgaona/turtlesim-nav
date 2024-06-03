@@ -1,0 +1,114 @@
+{
+	"kind" : "toolchains",
+	"toolchains" : 
+	[
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include",
+						"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/lib/gcc/x86_64-conda-linux-gnu/12.3.0/include",
+						"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/lib/gcc/x86_64-conda-linux-gnu/12.3.0/include-fixed",
+						"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/x86_64-conda-linux-gnu/include",
+						"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/x86_64-conda-linux-gnu/sysroot/usr/include"
+					],
+					"linkDirectories" : 
+					[
+						"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/lib",
+						"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/lib/gcc/x86_64-conda-linux-gnu/12.3.0",
+						"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/lib/gcc",
+						"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/x86_64-conda-linux-gnu/lib",
+						"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/x86_64-conda-linux-gnu/sysroot/lib",
+						"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/x86_64-conda-linux-gnu/sysroot/usr/lib"
+					],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : 
+					[
+						"gcc",
+						"gcc_s",
+						"c",
+						"gcc",
+						"gcc_s"
+					]
+				},
+				"path" : "/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/x86_64-conda-linux-gnu-cc",
+				"version" : "12.3.0"
+			},
+			"language" : "C",
+			"sourceFileExtensions" : 
+			[
+				"c",
+				"m"
+			]
+		},
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include",
+						"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/lib/gcc/x86_64-conda-linux-gnu/12.3.0/include",
+						"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/lib/gcc/x86_64-conda-linux-gnu/12.3.0/include-fixed",
+						"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/x86_64-conda-linux-gnu/include",
+						"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/x86_64-conda-linux-gnu/include/c++/12.3.0",
+						"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/x86_64-conda-linux-gnu/include/c++/12.3.0/x86_64-conda-linux-gnu",
+						"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/x86_64-conda-linux-gnu/include/c++/12.3.0/backward",
+						"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/x86_64-conda-linux-gnu/sysroot/usr/include"
+					],
+					"linkDirectories" : 
+					[
+						"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/lib",
+						"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/lib/gcc/x86_64-conda-linux-gnu/12.3.0",
+						"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/lib/gcc",
+						"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/x86_64-conda-linux-gnu/lib",
+						"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/x86_64-conda-linux-gnu/sysroot/lib",
+						"/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/x86_64-conda-linux-gnu/sysroot/usr/lib"
+					],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : 
+					[
+						"stdc++",
+						"m",
+						"gcc_s",
+						"gcc",
+						"c",
+						"gcc_s",
+						"gcc"
+					]
+				},
+				"path" : "/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/x86_64-conda-linux-gnu-c++",
+				"version" : "12.3.0"
+			},
+			"language" : "CXX",
+			"sourceFileExtensions" : 
+			[
+				"C",
+				"M",
+				"c++",
+				"cc",
+				"cpp",
+				"cxx",
+				"mm",
+				"mpp",
+				"CPP",
+				"ixx",
+				"cppm",
+				"ccm",
+				"cxxm",
+				"c++m"
+			]
+		}
+	],
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}

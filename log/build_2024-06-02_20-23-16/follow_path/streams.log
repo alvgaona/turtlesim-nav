@@ -1,0 +1,57 @@
+[0.008s] Invoking command in '/home/alvaro/github.com/turtlesim-follow-path/build/follow_path': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PIXI_PROMPT=(turtlesim-follow-path) /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/cmake --build /home/alvaro/github.com/turtlesim-follow-path/build/follow_path -- -j20 -l20
+[0.015s] 
+[0.015s] [0/1] Re-running CMake...[K
+[0.024s] -- Found ament_cmake: 1.3.7 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/ament_cmake/cmake)
+[0.038s] -- Found Python3: /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/python (found version "3.11.8") found components: Interpreter 
+[0.085s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.091s] -- Found rclcpp: 16.0.8 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rclcpp/cmake)
+[0.117s] -- Found rosidl_generator_c: 3.1.5 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_generator_c/cmake)
+[0.120s] -- Found rosidl_adapter: 3.1.5 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_adapter/cmake)
+[0.126s] -- Found rosidl_generator_cpp: 3.1.5 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_generator_cpp/cmake)
+[0.138s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.158s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.235s] -- Found rmw_implementation_cmake: 6.1.1 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rmw_implementation_cmake/cmake)
+[0.237s] -- Found rmw_fastrtps_cpp: 6.2.6 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rmw_fastrtps_cpp/cmake)
+[0.348s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.469s] -- Found std_msgs: 4.2.3 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/std_msgs/cmake)
+[0.503s] -- Found geometry_msgs: 4.2.3 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/geometry_msgs/cmake)
+[0.548s] -- Found rosidl_default_generators: 1.2.0 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_default_generators/cmake)
+[0.763s] -- Found Python3: /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/python3.11 (found version "3.11.8") found components: Development NumPy Interpreter Development.Module Development.Embed 
+[0.770s] -- Found ament_lint_auto: 0.12.10 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/ament_lint_auto/cmake)
+[0.770s] -- Found ament_cmake_gmock: 1.3.7 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/ament_cmake_gmock/cmake)
+[0.837s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.838s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/alvaro/github.com/turtlesim-follow-path/src/follow-path/include>
+[0.838s] -- Configured cppcheck exclude dirs and/or files: 
+[0.838s] -- Added test 'lint_cmake' to check CMake code style
+[0.839s] -- Added test 'uncrustify' to check C / C++ code style
+[0.839s] -- Configured uncrustify additional arguments: 
+[0.839s] -- Added test 'xmllint' to check XML markup files
+[0.840s] -- Configuring done (0.8s)
+[0.846s] -- Generating done (0.0s)
+[0.851s] -- Build files have been written to: /home/alvaro/github.com/turtlesim-follow-path/build/follow_path
+[0.858s] 
+[3.291s] [0/3] Building CXX object CMakeFiles/follow_path_node.dir/src/follow_path_node.cpp.o[K
+[3.291s] [1/3] Building CXX object CMakeFiles/follow_path_node.dir/src/follow_path_node.cpp.o[K
+[3.349s] [1/3] Linking CXX executable follow_path_node[K
+[3.349s] [2/3] Linking CXX executable follow_path_node[K
+[3.351s] Invoked command in '/home/alvaro/github.com/turtlesim-follow-path/build/follow_path' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PIXI_PROMPT=(turtlesim-follow-path) /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/cmake --build /home/alvaro/github.com/turtlesim-follow-path/build/follow_path -- -j20 -l20
+[3.366s] Invoking command in '/home/alvaro/github.com/turtlesim-follow-path/build/follow_path': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PIXI_PROMPT=(turtlesim-follow-path) /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/cmake --install /home/alvaro/github.com/turtlesim-follow-path/build/follow_path
+[3.369s] -- Install configuration: ""
+[3.369s] -- Execute custom install script
+[3.370s] -- Symlinking: /home/alvaro/github.com/turtlesim-follow-path/install/follow_path/lib/follow_path/follow_path_node
+[3.374s] -- Symlinking: /home/alvaro/github.com/turtlesim-follow-path/install/follow_path/share/ament_index/resource_index/package_run_dependencies/follow_path
+[3.377s] -- Symlinking: /home/alvaro/github.com/turtlesim-follow-path/install/follow_path/share/ament_index/resource_index/parent_prefix_path/follow_path
+[3.381s] -- Symlinking: /home/alvaro/github.com/turtlesim-follow-path/install/follow_path/share/follow_path/environment/ament_prefix_path.sh
+[3.385s] -- Symlinking: /home/alvaro/github.com/turtlesim-follow-path/install/follow_path/share/follow_path/environment/ament_prefix_path.dsv
+[3.389s] -- Symlinking: /home/alvaro/github.com/turtlesim-follow-path/install/follow_path/share/follow_path/environment/path.sh
+[3.393s] -- Symlinking: /home/alvaro/github.com/turtlesim-follow-path/install/follow_path/share/follow_path/environment/path.dsv
+[3.397s] -- Symlinking: /home/alvaro/github.com/turtlesim-follow-path/install/follow_path/share/follow_path/local_setup.bash
+[3.400s] -- Symlinking: /home/alvaro/github.com/turtlesim-follow-path/install/follow_path/share/follow_path/local_setup.sh
+[3.404s] -- Symlinking: /home/alvaro/github.com/turtlesim-follow-path/install/follow_path/share/follow_path/local_setup.zsh
+[3.408s] -- Symlinking: /home/alvaro/github.com/turtlesim-follow-path/install/follow_path/share/follow_path/local_setup.dsv
+[3.411s] -- Symlinking: /home/alvaro/github.com/turtlesim-follow-path/install/follow_path/share/follow_path/package.dsv
+[3.415s] -- Symlinking: /home/alvaro/github.com/turtlesim-follow-path/install/follow_path/share/ament_index/resource_index/packages/follow_path
+[3.420s] -- Symlinking: /home/alvaro/github.com/turtlesim-follow-path/install/follow_path/share/follow_path/cmake/follow_pathConfig.cmake
+[3.423s] -- Symlinking: /home/alvaro/github.com/turtlesim-follow-path/install/follow_path/share/follow_path/cmake/follow_pathConfig-version.cmake
+[3.427s] -- Symlinking: /home/alvaro/github.com/turtlesim-follow-path/install/follow_path/share/follow_path/package.xml
+[3.432s] Invoked command in '/home/alvaro/github.com/turtlesim-follow-path/build/follow_path' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PIXI_PROMPT=(turtlesim-follow-path) /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/cmake --install /home/alvaro/github.com/turtlesim-follow-path/build/follow_path

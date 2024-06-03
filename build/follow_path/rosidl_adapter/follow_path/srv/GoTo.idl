@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from follow_path/srv/GoTo.srv
+// generated code does not contain a copyright notice
+
+
+module follow_path {
+  module srv {
+    struct GoTo_Request {
+      double x;
+
+      double y;
+
+      double speed;
+    };
+    struct GoTo_Response {
+      boolean accepted;
+    };
+  };
+};

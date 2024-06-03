@@ -1,0 +1,21 @@
+
+[0/1] Re-running CMake...[K
+-- Found ament_cmake: 1.3.7 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/ament_cmake/cmake)
+-- Found Python3: /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/python (found version "3.11.8") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 16.0.8 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.1 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.6 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found std_msgs: 4.2.3 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/std_msgs/cmake)
+-- Found geometry_msgs: 4.2.3 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/geometry_msgs/cmake)
+-- Found rosidl_default_generators: 1.2.0 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_default_generators/cmake)
+-- Found Python3: /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/python3.11 (found version "3.11.8") found components: Development NumPy Interpreter Development.Module Development.Embed 
+-- Configuring incomplete, errors occurred!
+[31mFAILED: [0mbuild.ninja 
+/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/cmake --regenerate-during-build -S/home/alvaro/github.com/turtlesim-follow-path/src/follow-path -B/home/alvaro/github.com/turtlesim-follow-path/build/follow_path

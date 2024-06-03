@@ -1,0 +1,242 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-683ae55d13dd3952213f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "follow_path__py",
+					"jsonFile" : "directory-follow_path__py-Debug-8497a0a64aeec9dfbad0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "cmake-build-debug/follow_path__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "follow_path",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_follow_path_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_follow_path_egg-Debug-93e67304004dba465123.json",
+					"name" : "ament_cmake_python_build_follow_path_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_follow_path::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_follow_path-Debug-7ebeda952c5e8948ed61.json",
+					"name" : "ament_cmake_python_copy_follow_path",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_path::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_path-Debug-5034ae9202554a528822.json",
+					"name" : "follow_path",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_path__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_path__cpp-Debug-76c0009680f980a83d86.json",
+					"name" : "follow_path__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "follow_path__py::@a20f7a870e18ab992e33",
+					"jsonFile" : "target-follow_path__py-Debug-faaae7260520a855585a.json",
+					"name" : "follow_path__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_path__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_path__rosidl_generator_c-Debug-44ca082727644947c62d.json",
+					"name" : "follow_path__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_path__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_path__rosidl_generator_py-Debug-60e81757fb3ca526857a.json",
+					"name" : "follow_path__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_path__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_path__rosidl_typesupport_c-Debug-9e14af0271cb41448519.json",
+					"name" : "follow_path__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_path__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_path__rosidl_typesupport_c__pyext-Debug-b1deb4d1a8ff76102fa9.json",
+					"name" : "follow_path__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_path__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_path__rosidl_typesupport_cpp-Debug-73b7571c394f39b2cb42.json",
+					"name" : "follow_path__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_path__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_path__rosidl_typesupport_fastrtps_c-Debug-cbe3fe56d9f58899880d.json",
+					"name" : "follow_path__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_path__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_path__rosidl_typesupport_fastrtps_c__pyext-Debug-446b81809039fcc78a01.json",
+					"name" : "follow_path__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_path__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_path__rosidl_typesupport_fastrtps_cpp-Debug-8b2c1e2c1ecc55fefceb.json",
+					"name" : "follow_path__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_path__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_path__rosidl_typesupport_introspection_c-Debug-cd69b694d3df27123764.json",
+					"name" : "follow_path__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_path__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_path__rosidl_typesupport_introspection_c__pyext-Debug-9462dfeca296a5accca3.json",
+					"name" : "follow_path__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_path__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_path__rosidl_typesupport_introspection_cpp-Debug-0944739fad61fe82c285.json",
+					"name" : "follow_path__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_path_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_path_node-Debug-7fa2d216612c6d669d34.json",
+					"name" : "follow_path_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_path_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_path_uninstall-Debug-08bc12025583fa669a33.json",
+					"name" : "follow_path_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Debug-e075fb4c2b50a788c830.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/alvaro/github.com/turtlesim-follow-path/src/follow-path/cmake-build-debug",
+		"source" : "/home/alvaro/github.com/turtlesim-follow-path/src/follow-path"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

@@ -1,0 +1,30 @@
+[0.007s] Invoking command in '/home/alvaro/github.com/turtlesim-follow-path/build/follow_path': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PIXI_PROMPT=(turtlesim-follow-path) /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/cmake --build /home/alvaro/github.com/turtlesim-follow-path/build/follow_path -- -j20 -l20
+[0.014s] 
+[0.014s] [0/1] Re-running CMake...[K
+[0.025s] -- Found ament_cmake: 1.3.7 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/ament_cmake/cmake)
+[0.040s] -- Found Python3: /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/python (found version "3.11.8") found components: Interpreter 
+[0.087s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.093s] -- Found rclcpp: 16.0.8 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rclcpp/cmake)
+[0.119s] -- Found rosidl_generator_c: 3.1.5 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_generator_c/cmake)
+[0.122s] -- Found rosidl_adapter: 3.1.5 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_adapter/cmake)
+[0.129s] -- Found rosidl_generator_cpp: 3.1.5 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_generator_cpp/cmake)
+[0.142s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.159s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.235s] -- Found rmw_implementation_cmake: 6.1.1 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rmw_implementation_cmake/cmake)
+[0.237s] -- Found rmw_fastrtps_cpp: 6.2.6 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rmw_fastrtps_cpp/cmake)
+[0.346s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.470s] -- Found std_msgs: 4.2.3 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/std_msgs/cmake)
+[0.506s] -- Found geometry_msgs: 4.2.3 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/geometry_msgs/cmake)
+[0.551s] -- Found rosidl_default_generators: 1.2.0 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_default_generators/cmake)
+[0.763s] -- Found Python3: /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/python3.11 (found version "3.11.8") found components: Development NumPy Interpreter Development.Module Development.Embed 
+[0.768s] [31mCMake Error at /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:42 (message):
+[0.768s]   ament_target_dependencies() the first argument must be a valid target name
+[0.768s] Call Stack (most recent call first):
+[0.768s]   CMakeLists.txt:30 (ament_target_dependencies)
+[0.768s] 
+[0.768s] [0m
+[0.768s] -- Configuring incomplete, errors occurred!
+[0.773s] [31mFAILED: [0mbuild.ninja 
+[0.773s] /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/cmake --regenerate-during-build -S/home/alvaro/github.com/turtlesim-follow-path/src/follow-path -B/home/alvaro/github.com/turtlesim-follow-path/build/follow_path
+[0.773s] ninja: error: rebuilding 'build.ninja': subcommand failed
+[0.774s] Invoked command in '/home/alvaro/github.com/turtlesim-follow-path/build/follow_path' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PIXI_PROMPT=(turtlesim-follow-path) /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/cmake --build /home/alvaro/github.com/turtlesim-follow-path/build/follow_path -- -j20 -l20

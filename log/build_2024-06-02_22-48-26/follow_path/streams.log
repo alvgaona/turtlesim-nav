@@ -1,0 +1,97 @@
+[0.007s] Invoking command in '/home/alvaro/github.com/turtlesim-follow-path/build/follow_path': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PIXI_PROMPT=(turtlesim-follow-path) /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/cmake --build /home/alvaro/github.com/turtlesim-follow-path/build/follow_path -- -j20 -l20
+[0.014s] 
+[0.014s] [0/1] Re-running CMake...[K
+[0.024s] -- Found ament_cmake: 1.3.7 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/ament_cmake/cmake)
+[0.038s] -- Found Python3: /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/python (found version "3.11.8") found components: Interpreter 
+[0.083s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.088s] -- Found rclcpp: 16.0.8 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rclcpp/cmake)
+[0.113s] -- Found rosidl_generator_c: 3.1.5 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_generator_c/cmake)
+[0.115s] -- Found rosidl_adapter: 3.1.5 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_adapter/cmake)
+[0.121s] -- Found rosidl_generator_cpp: 3.1.5 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_generator_cpp/cmake)
+[0.133s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.150s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.224s] -- Found rmw_implementation_cmake: 6.1.1 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rmw_implementation_cmake/cmake)
+[0.225s] -- Found rmw_fastrtps_cpp: 6.2.6 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rmw_fastrtps_cpp/cmake)
+[0.334s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.453s] -- Found std_msgs: 4.2.3 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/std_msgs/cmake)
+[0.487s] -- Found geometry_msgs: 4.2.3 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/geometry_msgs/cmake)
+[0.529s] -- Found rosidl_default_generators: 1.2.0 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_default_generators/cmake)
+[0.737s] -- Found Python3: /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/python3.11 (found version "3.11.8") found components: Development NumPy Interpreter Development.Module Development.Embed 
+[0.756s] -- Found Python3: /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/python (found version "3.11.8") found components: Interpreter 
+[0.924s] -- Found ament_cmake_ros: 0.10.0 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/ament_cmake_ros/cmake)
+[1.159s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.388s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.390s] [33mCMake Warning (dev) at /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:20 (find_package):
+[1.390s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[1.390s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[1.390s]   the cmake_policy command to set the policy and suppress this warning.
+[1.390s] 
+[1.390s] Call Stack (most recent call first):
+[1.390s]   /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[1.390s]   /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[1.390s]   CMakeLists.txt:28 (rosidl_generate_interfaces)
+[1.390s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.390s] [0m
+[1.400s] -- Found python_cmake_module: 0.10.0 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/python_cmake_module/cmake)
+[1.400s] [33mCMake Warning (dev) at /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:52 (find_package):
+[1.400s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[1.400s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[1.400s]   the cmake_policy command to set the policy and suppress this warning.
+[1.400s] 
+[1.400s] Call Stack (most recent call first):
+[1.400s]   /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+[1.400s]   /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[1.400s]   /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[1.400s]   CMakeLists.txt:28 (rosidl_generate_interfaces)
+[1.401s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.401s] [0m
+[1.410s] [33mCMake Warning (dev) at /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:140 (find_package):
+[1.410s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[1.410s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[1.410s]   the cmake_policy command to set the policy and suppress this warning.
+[1.410s] 
+[1.410s] Call Stack (most recent call first):
+[1.410s]   /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+[1.410s]   /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[1.410s]   /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[1.410s]   CMakeLists.txt:28 (rosidl_generate_interfaces)
+[1.410s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.410s] [0m
+[1.411s] -- Using PYTHON_EXECUTABLE: /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/python3
+[1.411s] -- Using PYTHON_INCLUDE_DIRS: /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/python3.11
+[1.411s] -- Using PYTHON_LIBRARIES: /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/lib/libpython3.11.so
+[1.616s] -- Found Python3: /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/python3.11 (found version "3.11.8") found components: Development NumPy Interpreter Development.Module Development.Embed 
+[1.789s] -- Found ament_lint_auto: 0.12.10 (/home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/share/ament_lint_auto/cmake)
+[1.803s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.803s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/alvaro/github.com/turtlesim-follow-path/src/follow-path/include>
+[1.803s] -- Configured cppcheck exclude dirs and/or files: 
+[1.805s] -- Added test 'lint_cmake' to check CMake code style
+[1.808s] -- Added test 'uncrustify' to check C / C++ code style
+[1.808s] -- Configured uncrustify additional arguments: 
+[1.809s] -- Added test 'xmllint' to check XML markup files
+[1.811s] -- Configuring done (1.8s)
+[1.838s] -- Generating done (0.0s)
+[1.868s] -- Build files have been written to: /home/alvaro/github.com/turtlesim-follow-path/build/follow_path
+[1.880s] 
+[1.880s] [0/5] Building CXX object CMakeFiles/follow_path_node.dir/src/follow_path_node.cpp.o[K
+[1.884s] [0/5] cd /home/alvaro/github.com/turtlesim-follow-path/build/follow_path && /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/cmake -E create_symlink /home/alvaro/github.com/turtlesim-follow-path/build/follow_path/rosidl_generator_py/follow_path /home/alvaro/github.com/turtlesim-follow-path/build/follow_path/ament_cmake_python/follow_path/follow_path[K
+[1.884s] [1/5] cd /home/alvaro/github.com/turtlesim-follow-path/build/follow_path && /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/cmake -E create_symlink /home/alvaro/github.com/turtlesim-follow-path/build/follow_path/rosidl_generator_py/follow_path /home/alvaro/github.com/turtlesim-follow-path/build/follow_path/ament_cmake_python/follow_path/follow_path[K
+[2.048s] [1/5] cd /home/alvaro/github.com/turtlesim-follow-path/build/follow_path/ament_cmake_python/follow_path && /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/python setup.py egg_info[K
+[2.048s] [2/5] cd /home/alvaro/github.com/turtlesim-follow-path/build/follow_path/ament_cmake_python/follow_path && /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/python setup.py egg_info[K
+[2.048s] running egg_info
+[2.048s] writing follow_path.egg-info/PKG-INFO
+[2.048s] writing dependency_links to follow_path.egg-info/dependency_links.txt
+[2.048s] writing top-level names to follow_path.egg-info/top_level.txt
+[2.048s] reading manifest file 'follow_path.egg-info/SOURCES.txt'
+[2.048s] writing manifest file 'follow_path.egg-info/SOURCES.txt'
+[2.065s] 
+[2.065s] [3/5] Building CXX object CMakeFiles/follow_path_node.dir/src/follow_path_node.cpp.o[K
+[2.065s] [31mFAILED: [0mCMakeFiles/follow_path_node.dir/src/follow_path_node.cpp.o 
+[2.065s] /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/x86_64-conda-linux-gnu-c++ -DDEFAULT_RMW_IMPLEMENTATION=rmw_fastrtps_cpp -DROS_PACKAGE_NAME=\"follow_path\" -I/home/alvaro/github.com/turtlesim-follow-path/src/follow-path/include -isystem /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/rclcpp -isystem /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/std_msgs -isystem /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/geometry_msgs -isystem /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/ament_index_cpp -isystem /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/libstatistics_collector -isystem /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/builtin_interfaces -isystem /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/rosidl_runtime_c -isystem /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/rcutils -isystem /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/rosidl_typesupport_interface -isystem /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/rosidl_runtime_cpp -isystem /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/rosidl_typesupport_fastrtps_cpp -isystem /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/rmw -isystem /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/rosidl_typesupport_fastrtps_c -isystem /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/rosidl_typesupport_introspection_c -isystem /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/rosidl_typesupport_introspection_cpp -isystem /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/rcl -isystem /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/rcl_interfaces -isystem /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/rcl_logging_interface -isystem /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/rcl_yaml_param_parser -isystem /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/tracetools -isystem /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/rcpputils -isystem /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/statistics_msgs -isystem /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/rosgraph_msgs -isystem /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/rosidl_typesupport_cpp -isystem /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include/rosidl_typesupport_c -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/include -std=gnu++20 -Wall -Wextra -Wpedantic -MD -MT CMakeFiles/follow_path_node.dir/src/follow_path_node.cpp.o -MF CMakeFiles/follow_path_node.dir/src/follow_path_node.cpp.o.d -o CMakeFiles/follow_path_node.dir/src/follow_path_node.cpp.o -c /home/alvaro/github.com/turtlesim-follow-path/src/follow-path/src/follow_path_node.cpp
+[2.065s] In file included from /home/alvaro/github.com/turtlesim-follow-path/src/follow-path/src/follow_path_node.cpp:1:
+[2.065s] /home/alvaro/github.com/turtlesim-follow-path/src/follow-path/include/follow_path_node.h:4:10: fatal error: follow_path::srv::go_to.hpp: No such file or directory
+[2.065s]     4 | #include "follow_path::srv::go_to.hpp"
+[2.066s]       |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[2.066s] compilation terminated.
+[2.066s] ninja: build stopped: subcommand failed.
+[2.066s] Invoked command in '/home/alvaro/github.com/turtlesim-follow-path/build/follow_path' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PIXI_PROMPT=(turtlesim-follow-path) /home/alvaro/github.com/turtlesim-follow-path/.pixi/envs/default/bin/cmake --build /home/alvaro/github.com/turtlesim-follow-path/build/follow_path -- -j20 -l20
