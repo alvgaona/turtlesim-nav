@@ -4,39 +4,10 @@
 install/
 log/
 
-# Datasets
-test/**/AGZ_subset
-
-# Git submodules
-third-party/
-
-# JetBrains CLion
-.idea/
-
-# VSCode
-.vscode/
-
 # CMake
 build/
 cmake-build-*/
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
 # pixi environments
 .pixi
 *.egg-info
-
