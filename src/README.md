@@ -1,1 +1,0 @@
-# TurtleSim Follow Path
