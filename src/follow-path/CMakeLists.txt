@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.16)
 project(follow_path)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -17,9 +17,19 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(turtlesim REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(casadi REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
+
+include_directories(
+  include
+  ${rclcpp_INCLUDE_DIRS}
+  ${std_msgs_INCLUDE_DIRS}
+  ${geometry_msgs_INCLUDE_DIRS}
+  ${turtlesim_INCLUDE_DIRS}
+  ${casadi_INCLUDE_DIRS}
+)
 
 file(GLOB_RECURSE src_files src/*.cpp)
 list(FILTER src_files EXCLUDE REGEX "src/.*_node.cpp")
@@ -43,17 +53,12 @@ ament_target_dependencies(
   rclcpp
   std_msgs
   geometry_msgs
+  turtlesim
 )
 target_link_libraries(
   follow_path_node PUBLIC
   "${cpp_typesupport_target}"
   casadi
-)
-target_include_directories(
-  follow_path_node PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include>
-  ${casadi_INCLUDE_DIRS}
 )
 
 install(
@@ -61,10 +66,13 @@ install(
   DESTINATION lib/${PROJECT_NAME}
 )
 
+install(DIRECTORY
+  launch
+  DESTINATION share/${PROJECT_NAME}
+)
+
 if(BUILD_TESTING)
-  set(test_src
-        "test/utest_follow.cpp"
-    )
+  set(test_src "test/utest_follow.cpp")
   file(GLOB_RECURSE src_for_test src/*.cpp)
   list(FILTER src_for_test EXCLUDE REGEX "src/.*_node.cpp")
 
