@@ -13,10 +13,10 @@ def generate_launch_description():
                 name="turtilesim_node",
             ),
             Node(
-                package="follow_path",
-                executable="follow_path_node",
-                name="follow_path",
-                namespace="turtles1",
+                package="turtle_nav",
+                executable="turtle_nav_node",
+                name="turtle_nav",
+                namespace="turtle1",
                 output="screen",
                 arguments=["--ros-args", "--log-level", "info"],
             )

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(follow_path)
+project(turtle_nav)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
@@ -36,6 +36,7 @@ list(FILTER src_files EXCLUDE REGEX "src/.*_node.cpp")
 
 set(srv_files
   "srv/GoTo.srv"
+  "srv/FollowPath.srv"
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}
@@ -47,22 +48,22 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 
 rosidl_get_typesupport_target(cpp_typesupport_target ${PROJECT_NAME} rosidl_typesupport_cpp)
 
-add_executable(follow_path_node src/follow_path_node.cpp ${src_files})
+add_executable(turtle_nav_node src/turtle_nav_node.cpp ${src_files})
 ament_target_dependencies(
-  follow_path_node PUBLIC
+  turtle_nav_node PUBLIC
   rclcpp
   std_msgs
   geometry_msgs
   turtlesim
 )
 target_link_libraries(
-  follow_path_node PUBLIC
+  turtle_nav_node PUBLIC
   "${cpp_typesupport_target}"
   casadi
 )
 
 install(
-  TARGETS follow_path_node
+  TARGETS turtle_nav_node
   DESTINATION lib/${PROJECT_NAME}
 )
 
@@ -78,8 +79,8 @@ if(BUILD_TESTING)
 
   find_package(ament_cmake_gmock REQUIRED)
 
-  ament_add_gmock(follow_path_test ${test_src} ${src_for_test})
-  ament_target_dependencies(follow_path_test std_msgs)
+  ament_add_gmock(turtle_nav_test ${test_src} ${src_for_test})
+  ament_target_dependencies(turtle_nav_test std_msgs)
 endif()
 
 ament_package()

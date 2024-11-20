@@ -1,5 +1,5 @@
 [project]
-name = "turtlesim-path-follower"
+name = "turtle-nav"
 version = "0.1.0"
 description = "UPM Programming Aerial Robotics Assignment I"
 authors = ["Alvaro <alvgaona@gmail.com>"]
@@ -22,9 +22,9 @@ test = { cmd = [
   "test",
   "--ctest-args",
   "tests",
-  "follow-path",
+  "turtle-nav",
   "&&",
-  "./build/follow_path/follow_path_test",
+  "./build/turtle_nav/turtle_nav_test",
 ], depends-on = [
   "build",
 ] }
