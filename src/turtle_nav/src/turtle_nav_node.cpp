@@ -1,4 +1,4 @@
-#include "follow_path_node.h"
+#include "turtle_nav_node.h"
 
 #include <casadi/casadi.hpp>
 #include <casadi/core/optistack.hpp>
@@ -10,23 +10,24 @@
 
 #include "geometry_msgs/geometry_msgs/msg/twist.hpp"
 #include "point_stabilizer.h"
+#include "turtle_nav/srv/detail/follow_path__struct.hpp"
 
 using namespace std::chrono_literals;
 
-FollowPathNode::FollowPathNode()
-  : Node("follow_path"),
+TurtleNav::TurtleNav()
+  : Node("turtle_nav"),
     point_stabilizer_({
       .horizon_length = 25,
       .state_dim = 3,
       .input_dim = 2,
       .dt = 0.02,
-      .Q = casadi::DM::diag({10.0, 150.0, 5.0}),
+      .Q = casadi::DM::diag({10.0, 150.0}),
       .R = casadi::DM::diag({0.05, 0.05}),
-    }) {
+    }),
+    has_target_() {
   publisher_ =
     this->create_publisher<geometry_msgs::msg::Twist>("/turtle1/cmd_vel", 10);
   subscriber_ = this->create_subscription<turtlesim::msg::Pose>(
-
     "turtle1/pose",
     10,
     [this](const std::shared_ptr<const turtlesim::msg::Pose>& msg) {  // NOLINT
@@ -34,25 +35,39 @@ FollowPathNode::FollowPathNode()
     }
   );
   timer_ = this->create_wall_timer(25ms, [this]() { timer_callback(); });
-  goto_service_ = this->create_service<follow_path::srv::GoTo>(
-    "follow_path/goto",
+  goto_service_ = this->create_service<turtle_nav::srv::GoTo>(
+    "turlte_nav/goto",
     [this](
-      const std::shared_ptr<follow_path::srv::GoTo::Request>& request,
-      const std::shared_ptr<follow_path::srv::GoTo::Response>& response
-    ) { GoToGoal(request, response); }
+      const std::shared_ptr<turtle_nav::srv::GoTo::Request>& request,
+      const std::shared_ptr<turtle_nav::srv::GoTo::Response>& response
+    ) { go_to(request, response); }
+  );
+  follow_path_service_ = this->create_service<turtle_nav::srv::FollowPath>(
+    "turtle_nav/follow_path",
+    [this](
+      const std::shared_ptr<turtle_nav::srv::FollowPath::Request>& request,
+      const std::shared_ptr<turtle_nav::srv::FollowPath::Response>& response
+    ) {}
   );
 }
 
-void FollowPathNode::GoToGoal(
-  const std::shared_ptr<follow_path::srv::GoTo::Request>& request,
-  const std::shared_ptr<follow_path::srv::GoTo::Response>& response
+void TurtleNav::go_to(
+  const std::shared_ptr<turtle_nav::srv::GoTo::Request>& request,
+  const std::shared_ptr<turtle_nav::srv::GoTo::Response>& response
 ) {
   point_stabilizer_.set_target({request->x, request->y, 0.0});
   has_target_ = true;
   response->accepted = true;
 }
 
-void FollowPathNode::timer_callback() {
+void TurtleNav::follow_path(
+  const std::shared_ptr<turtle_nav::srv::FollowPath::Request>& request,
+  const std::shared_ptr<turtle_nav::srv::FollowPath::Response>& response
+) {
+  response->accepted = true;
+}
+
+void TurtleNav::timer_callback() {
   if (has_target_) {
     casadi::DM u = point_stabilizer_.step(casadi::DM({
       current_pose_->x,
@@ -72,7 +87,7 @@ void FollowPathNode::timer_callback() {
 
 int main(const int argc, char* argv[]) {
   rclcpp::init(argc, argv);
-  rclcpp::spin(std::make_shared<FollowPathNode>());
+  rclcpp::spin(std::make_shared<TurtleNav>());
   rclcpp::shutdown();
   return 0;
 }

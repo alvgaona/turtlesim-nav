@@ -26,7 +26,7 @@ void PointStabilizer::init() {
   casadi::MX J = 0;  // objective function
 
   for (int k = 0; k < N_; k++) {
-    auto state_error = x_(casadi::Slice(), k) - r_;
+    auto state_error = x_(casadi::Slice(0, 2), k) - r_(casadi::Slice(0, 2));
 
     J +=
       casadi::MX::mtimes(casadi::MX::mtimes(state_error.T(), Q_), state_error);
@@ -45,7 +45,7 @@ void PointStabilizer::init() {
   opti_.minimize(J);
 
   opti_.subject_to(x_(casadi::Slice(), 0) == x0_);
-  opti_.subject_to(u_(0, casadi::Slice()) >= -1);
+  opti_.subject_to(u_(0, casadi::Slice()) >= 0);
   opti_.subject_to(u_(0, casadi::Slice()) <= 1);
   opti_.subject_to(u_(1, casadi::Slice()) >= -1);
   opti_.subject_to(u_(1, casadi::Slice()) <= 1);
