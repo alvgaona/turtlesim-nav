@@ -255,7 +255,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libqdldl-0.1.7-hcb278e6_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libraw-0.21.1-h2a13503_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libre2-11-2023.09.01-h5a48ba9_2.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/librerun-sdk-0.20.0-hf327840_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/librerun-sdk-0.20.1-hf327840_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/librsvg-2.58.1-hadf69e7_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libsanitizer-12.4.0-h46f95d5_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libscotch-7.0.4-h2fe6a88_5.conda
@@ -270,6 +270,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libtasn1-4.19.0-h166bdaf_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libtheora-1.1.1-h4ab18f5_1006.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libtiff-4.6.0-h1dd3fc0_3.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libtinyspline-0.6.0-hac33072_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libunistring-0.9.10-h7f98852_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libutf8proc-2.8.0-h166bdaf_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libuuid-2.38.1-h0b41bf4_0.conda
@@ -5576,25 +5577,25 @@ packages:
   timestamp: 1708946763521
 - kind: conda
   name: librerun-sdk
-  version: 0.20.0
+  version: 0.20.1
   build: hf327840_0
   subdir: linux-64
-  url: https://conda.anaconda.org/conda-forge/linux-64/librerun-sdk-0.20.0-hf327840_0.conda
-  sha256: 989dd2a8d20d2ea5f1441f19c0092fa2686887b6c32d9d0be867f2466c795b5e
-  md5: 2c43c180c9c7ee5c858d1cdccaaf2998
+  url: https://conda.anaconda.org/conda-forge/linux-64/librerun-sdk-0.20.1-hf327840_0.conda
+  sha256: ad3e702c8dafd425a241b559940f740ec5c81621b689c4782321cd145f029187
+  md5: a29b2d335321c593d1028642601a60a0
   depends:
   - __glibc >=2.17,<3.0.a0
   - libarrow >=16.1.0,<16.2.0a0
   - libgcc >=13
   - libstdcxx >=13
   constrains:
-  - rerun-sdk 0.20.0
+  - rerun-sdk 0.20.1
   - __glibc >=2.17
   arch: x86_64
   platform: linux
   license: MIT OR Apache-2.0
-  size: 4406258
-  timestamp: 1731782152439
+  size: 4403051
+  timestamp: 1732697751771
 - kind: conda
   name: librsvg
   version: 2.58.1
@@ -5876,6 +5877,23 @@ packages:
   license: HPND
   size: 282688
   timestamp: 1711217970425
+- kind: conda
+  name: libtinyspline
+  version: 0.6.0
+  build: hac33072_0
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/libtinyspline-0.6.0-hac33072_0.conda
+  sha256: 0b7f674e1f4167f9b8e2928f39732ce0f0a53f0c5ea412d3ae4cb0286f478f4d
+  md5: ac9ccc5ab76305b64d44e4636a0bf00b
+  depends:
+  - libgcc-ng >=12
+  - libstdcxx-ng >=12
+  arch: x86_64
+  platform: linux
+  license: MIT
+  license_family: MIT
+  size: 120611
+  timestamp: 1718486492190
 - kind: conda
   name: libunistring
   version: 0.9.10

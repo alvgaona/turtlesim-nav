@@ -41,8 +41,8 @@ ros-humble-desktop = ">=0.10.0,<0.11"
 ros-humble-turtlesim = ">=1.4.2,<1.5"
 spdlog = ">=1.12.0,<1.13"
 casadi = ">=3.6.7,<4"
-boost = ">=1.82.0,<2"
-librerun-sdk = "*"
+librerun-sdk = ">=0.20.1,<0.21"
+libtinyspline = ">=0.6.0,<0.7"
 
 [activation]
 scripts = ["install/setup.sh"]
