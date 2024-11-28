@@ -23,21 +23,13 @@ find_package(turtlesim REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(casadi REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
-
-include_directories(
-  include
-  ${rclcpp_INCLUDE_DIRS}
-  ${std_msgs_INCLUDE_DIRS}
-  ${std_srvs_INCLUDE_DIRS}
-  ${geometry_msgs_INCLUDE_DIRS}
-  ${turtlesim_INCLUDE_DIRS}
-  ${casadi_INCLUDE_DIRS}
-)
+find_package(tinysplinecxx REQUIRED)
 
 file(GLOB_RECURSE src_files src/*.cpp)
 list(FILTER src_files EXCLUDE REGEX "src/.*_node.cpp")
 
-set(srv_files
+set(
+  srv_files
   "srv/GoTo.srv"
   "srv/FollowPath.srv"
 )
@@ -52,6 +44,25 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 
 rosidl_get_typesupport_target(cpp_typesupport_target ${PROJECT_NAME} rosidl_typesupport_cpp)
 
+include_directories(
+  include
+  ${rclcpp_INCLUDE_DIRS}
+  ${std_msgs_INCLUDE_DIRS}
+  ${std_srvs_INCLUDE_DIRS}
+  ${geometry_msgs_INCLUDE_DIRS}
+  ${turtlesim_INCLUDE_DIRS}
+  ${casadi_INCLUDE_DIRS}
+  ${rerun_sdk_INCLUDE_DIRS}
+  ${tinysplinecxx_INCLUDE_DIRS}
+)
+
+link_libraries(
+  "${cpp_typesupport_target}"
+  casadi
+  rerun_sdk
+  tinysplinecxx::tinysplinecxx
+)
+
 add_executable(turtle_nav_node src/turtle_nav_node.cpp ${src_files})
 ament_target_dependencies(
   turtle_nav_node PUBLIC
@@ -60,11 +71,6 @@ ament_target_dependencies(
   std_srvs
   geometry_msgs
   turtlesim
-)
-target_link_libraries(
-  turtle_nav_node PUBLIC
-  "${cpp_typesupport_target}"
-  casadi
 )
 
 install(
