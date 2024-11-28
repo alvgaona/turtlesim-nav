@@ -13,6 +13,7 @@
 #include <rerun.hpp>
 #include <rerun/archetypes/arrows2d.hpp>
 #include <rerun/archetypes/boxes2d.hpp>
+#include <rerun/archetypes/line_strips2d.hpp>
 #include <rerun/archetypes/points2d.hpp>
 #include <rerun/archetypes/view_coordinates.hpp>
 #include <rerun/recording_stream.hpp>
@@ -81,17 +82,21 @@ TurtleNav::TurtleNav() : Node("turtle_nav"), rec_("turtle_nav") {
 
   rec_.spawn().exit_on_failure();
 
+  rec_.log_file_from_path(std::filesystem::path("rerun/turtle_nav.rbl"));
+
   rec_.log(
     "world/frame",
     rerun::Arrows2D::from_vectors({{1.0, 0.0}, {0.0, 1.0}})
       .with_origins({{-0.1, -0.1}, {-0.1, -0.1}})
       .with_colors({{255, 0, 0}, {0, 255, 0}})
       .with_labels({"x", "y"})
+      .with_draw_order(0)
   );
 
   rec_.log(
     "world/landmarks",
-    rerun::Points2D({{0, 0}, {10, 10}, {5, 5}, {0, 10}, {10, 0}})
+    rerun::Points2D({{0, 0}, {10, 10}, {5, 5}, {0, 10}, {10, 0}}
+    ).with_draw_order(1)
   );
 
   rec_.log(
@@ -99,6 +104,7 @@ TurtleNav::TurtleNav() : Node("turtle_nav"), rec_("turtle_nav") {
     rerun::Boxes2D::from_centers_and_half_sizes({{5.0f, 5.0f}}, {{5.0f, 5.0f}})
       .with_colors(rerun::Color(0, 0, 255))
       .with_labels({"limits"})
+      .with_draw_order(0)
   );
 }
 
@@ -131,12 +137,28 @@ void TurtleNav::follow_path(
   }
   [[maybe_unused]] double speed = request->speed;
 
-  rec_.log("trajectory/control_points", rerun::Points2D(waypoints));
+  rec_.log(
+    "world/trajectory/control_points",
+    rerun::Points2D(waypoints)
+      .with_radii(0.1)
+      .with_colors(rerun::Color(255, 0, 0))
+      .with_draw_order(2)
+  );
 
   auto xy =
     planar_trajectory(waypoints, static_cast<int>(waypoints.size()), 2, 2);
 
-  // rec_.log("trajectory", rerun::Points2D(xy));
+  std::vector<rerun::LineStrip2D> ref;
+
+  for (size_t i = 0; i < xy.size() - 1; i++) {
+    auto curr = xy[i];
+    auto next = xy[i + 1];
+    ref.push_back(
+      rerun::LineStrip2D({{curr.x(), curr.y()}, {next.x(), next.y()}})
+    );
+  }
+
+  rec_.log("world/trajectory/ref", rerun::LineStrips2D(ref).with_draw_order(2));
 
   trajectory_tracker_.set_ref_traj(std::move(xy));
 
@@ -145,13 +167,13 @@ void TurtleNav::follow_path(
 }
 
 void TurtleNav::go_to_callback() {
-  rec_.log("x", rerun::Scalar(current_pose_->x));
-  rec_.log("y", rerun::Scalar(current_pose_->y));
-  rec_.log("orientation", rerun::Scalar(current_pose_->theta));
+  rec_.log("robot/state/x", rerun::Scalar(current_pose_->x));
+  rec_.log("robot/state/y", rerun::Scalar(current_pose_->y));
+  rec_.log("robot/state/orientation", rerun::Scalar(current_pose_->theta));
 
   real_traj_.emplace_back(current_pose_->x, current_pose_->y);
 
-  rec_.log("world/xy", rerun::Points2D(real_traj_));
+  rec_.log("world/robot/xy", rerun::Points2D(real_traj_));
 
   casadi::DM u = point_stabilizer_.step(casadi::DM({
     current_pose_->x,
@@ -172,13 +194,13 @@ void TurtleNav::go_to_callback() {
 }
 
 void TurtleNav::follow_path_callback() {
-  // rec_.log("x", rerun::Scalar(current_pose_->x));
-  // rec_.log("y", rerun::Scalar(current_pose_->y));
-  // rec_.log("orientation", rerun::Scalar(current_pose_->theta));
+  rec_.log("robot/state/x", rerun::Scalar(current_pose_->x));
+  rec_.log("robot/state/y", rerun::Scalar(current_pose_->y));
+  rec_.log("robot/state/orientation", rerun::Scalar(current_pose_->theta));
 
   real_traj_.emplace_back(current_pose_->x, current_pose_->y);
 
-  rec_.log("world/xy", rerun::Points2D(real_traj_));
+  rec_.log("world/robot/xy", rerun::Points2D(real_traj_));
 
   casadi::DM u = trajectory_tracker_.step(casadi::DM({
     current_pose_->x,
