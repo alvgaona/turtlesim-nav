@@ -22,7 +22,7 @@ TrajectoryTracker::TrajectoryTracker(const Options& options)
   x_ = opti_.variable(num_states_, N_ + 1);
   u_ = opti_.variable(num_inputs_, N_);
   x0_ = opti_.parameter(num_states_);
-  r_ = opti_.parameter(num_states_ - 1, N_ + 1);
+  r_ = opti_.parameter(num_states_, N_ + 1);
 
   init();
 }
@@ -31,7 +31,7 @@ void TrajectoryTracker::init() {
   casadi::MX J = 0;  // objective function
 
   for (int k = 0; k < N_; k++) {
-    auto state_error = x_(casadi::Slice(0, 2), k) - r_(casadi::Slice(0, 2), k);
+    auto state_error = x_(casadi::Slice(), k) - r_(casadi::Slice(), k);
 
     J +=
       casadi::MX::mtimes(casadi::MX::mtimes(state_error.T(), Q_), state_error);
@@ -48,7 +48,6 @@ void TrajectoryTracker::init() {
   }
 
   opti_.minimize(J);
-
   opti_.subject_to(x_(casadi::Slice(), 0) == x0_);
   opti_.subject_to(u_(0, casadi::Slice()) >= 0);
   opti_.subject_to(u_(0, casadi::Slice()) <= 1);

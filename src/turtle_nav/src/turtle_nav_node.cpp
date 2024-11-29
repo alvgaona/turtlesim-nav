@@ -71,15 +71,18 @@ TurtleNav::TurtleNav() : Node("turtle_nav"), rec_("turtle_nav") {
     .R = casadi::DM::diag({0.05, 0.05}),
   });
 
+  std::cout << "HI" << std::endl;
+
   trajectory_tracker_ = TrajectoryTracker({
     .horizon_length = 25,
     .state_dim = 3,
     .input_dim = 2,
     .dt = 0.02,
-    .Q = casadi::DM::diag({10.0, 150.0}),
+    .Q = casadi::DM::diag({10.0, 150.0, 50.0}),
     .R = casadi::DM::diag({0.05, 0.05}),
   });
 
+  std::cout << "BYE" << std::endl;
   rec_.spawn().exit_on_failure();
 
   rec_.log_file_from_path(std::filesystem::path("rerun/turtle_nav.rbl"));
@@ -116,8 +119,12 @@ void TurtleNav::go_to(
 
   rec_.log(
     "world/goal",
-    rerun::Points2D({{static_cast<float>(request->x),
-                      static_cast<float>(request->y)}})
+    rerun::Points2D({
+                      {
+                        static_cast<float>(request->x),
+                        static_cast<float>(request->y),
+                      },
+                    })
       .with_colors(rerun::Color(255, 0, 0))
       .with_labels({"goal"})
   );

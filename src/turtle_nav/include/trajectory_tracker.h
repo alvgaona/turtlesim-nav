@@ -4,6 +4,8 @@
 #include <cstdint>
 #include <rerun.hpp>
 
+#include "utils.h"
+
 class TrajectoryTracker {
  public:
   struct Options {
@@ -26,11 +28,19 @@ class TrajectoryTracker {
   void set_target(const casadi::DM& r) { opti_.set_value(r_, r); }
 
   void set_ref_traj(std::vector<rerun::Position2D>&& xy) {
-    casadi::DM ref(2, static_cast<int>(xy.size()));
+    auto xy_diff = diff(xy);
+
+    auto angles = casadi::DM::atan2(
+      xy_diff(casadi::Slice(), 1), xy_diff(casadi::Slice(), 0)
+    );
+
+    angles = casadi::DM::vertcat({angles(0), angles});
+
+    casadi::DM ref(3, static_cast<int>(xy.size()));
     for (size_t i = 0; i < xy.size(); i++) {
       ref(0, i) = xy[i].x();
       ref(1, i) = xy[i].y();
-      // ref(2, i) = 0.0;  // theta component
+      ref(2, i) = angles(i);
     }
     ref_traj_ = ref;
   }

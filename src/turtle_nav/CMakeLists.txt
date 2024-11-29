@@ -82,7 +82,7 @@ install(DIRECTORY
 )
 
 if(BUILD_TESTING)
-  set(test_src "test/utest_follow.cpp")
+  file(GLOB_RECURSE test_src test/utest_*.cpp)
   file(GLOB_RECURSE src_for_test src/*.cpp)
   list(FILTER src_for_test EXCLUDE REGEX "src/.*_node.cpp")
 
