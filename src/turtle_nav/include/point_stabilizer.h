@@ -14,7 +14,7 @@ class PointStabilizer {
     casadi::DM R;
   };
 
-  PointStabilizer();
+  PointStabilizer() = default;
   explicit PointStabilizer(const Options& options);
   ~PointStabilizer() = default;
 
