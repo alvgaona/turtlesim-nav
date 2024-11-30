@@ -18,7 +18,7 @@ The controller implementation relies on a mathematical unicycle model, which can
 to function as a differential-drive system.
 
 The foundation for this implementation comes from a previous simulation that focused on mathematical
-model interactions specifically at control application points (instant `k`).
+model interactions specifically to compute the control input and to apply said input.
 For more details, see this [post](https://alvgaona.com/posts/casadi-mpc-controller-0x4a3b/).
 
 ## Visualization
