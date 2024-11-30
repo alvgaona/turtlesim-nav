@@ -1,4 +1,4 @@
-# TurtleNav
+# TurtleSim Nav
 
 https://github.com/user-attachments/assets/4f7f2ef3-c4e4-4324-9834-b4eed234d826
 
