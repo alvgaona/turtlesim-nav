@@ -24,3 +24,34 @@ casadi::DM diff(const std::vector<rerun::Position2D>& points) {
 
   return result;
 }
+
+casadi::DM pad(const casadi::DM& input, int col_padding, int row_padding) {
+  if (col_padding <= 0 && row_padding <= 0) {
+    return input;
+  }
+
+  // Get dimensions of input array
+  auto rows = input.size1();
+  auto cols = input.size2();
+
+  // Create the padded matrix for column padding
+  casadi::DM padded = input;
+
+  // Add column padding if needed
+  if (col_padding > 0) {
+    casadi::DM last_col = input(casadi::Slice(), cols - 1);
+    for (int i = 0; i < col_padding; i++) {
+      padded = casadi::DM::horzcat({padded, last_col});
+    }
+  }
+
+  // Add row padding if needed
+  if (row_padding > 0) {
+    casadi::DM last_row = padded(rows - 1, casadi::Slice());
+    for (int i = 0; i < row_padding; i++) {
+      padded = casadi::DM::vertcat({padded, last_row});
+    }
+  }
+
+  return padded;
+}
