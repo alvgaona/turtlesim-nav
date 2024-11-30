@@ -6,7 +6,6 @@
 #include <casadi/core/dm_fwd.hpp>
 #include <casadi/core/optistack.hpp>
 #include <casadi/core/slice.hpp>
-#include <cstdint>
 
 #include "kinematics.h"
 
@@ -50,7 +49,7 @@ void TrajectoryTracker::init() {
   opti_.minimize(J);
   opti_.subject_to(x_(casadi::Slice(), 0) == x0_);
   opti_.subject_to(u_(0, casadi::Slice()) >= 0);
-  opti_.subject_to(u_(0, casadi::Slice()) <= 1);
+  opti_.subject_to(u_(0, casadi::Slice()) <= 5);
   opti_.subject_to(u_(1, casadi::Slice()) >= -1);
   opti_.subject_to(u_(1, casadi::Slice()) <= 1);
   opti_.subject_to(x_(0, casadi::Slice()) >= 0);
@@ -73,17 +72,13 @@ void TrajectoryTracker::init() {
 }
 
 casadi::DM TrajectoryTracker::step(const casadi::DM& x) {
-  casadi::Slice cols(k_, N_ + 1 + k_);
+  int m = static_cast<int>(ref_traj_.size2());
+  casadi::Slice cols(std::min(k_, m - 1), std::min(N_ + 1 + k_, m));
   casadi::DM ref = ref_traj_(casadi::Slice(), cols);
 
   if (ref.size2() < N_ + 1) {
     int padding = N_ + 1 - static_cast<int>(ref.size2());
-
-    casadi::DM last_col(ref_traj_(casadi::Slice(), ref.size2() - 1));
-
-    for (int i = 0; i < padding; i++) {
-      ref = casadi::DM::horzcat({ref, last_col});
-    }
+    ref = pad(ref, padding, 0);
   }
 
   opti_.set_value(r_, ref);

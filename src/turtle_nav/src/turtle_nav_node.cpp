@@ -4,10 +4,8 @@
 
 #include <casadi/casadi.hpp>
 #include <casadi/core/optistack.hpp>
-#include <chrono>
 #include <cstddef>
 #include <cstdlib>
-#include <iostream>
 #include <memory>
 #include <rclcpp/node.hpp>
 #include <rerun.hpp>
@@ -21,7 +19,6 @@
 #include <string_view>
 #include <turtlesim/msg/detail/pose__struct.hpp>
 
-#include "geometry_msgs/geometry_msgs/msg/twist.hpp"
 #include "point_stabilizer.h"
 #include "trajectory_tracker.h"
 #include "turtle_nav/srv/detail/follow_path__struct.hpp"
@@ -71,18 +68,15 @@ TurtleNav::TurtleNav() : Node("turtle_nav"), rec_("turtle_nav") {
     .R = casadi::DM::diag({0.05, 0.05}),
   });
 
-  std::cout << "HI" << std::endl;
-
   trajectory_tracker_ = TrajectoryTracker({
     .horizon_length = 25,
     .state_dim = 3,
     .input_dim = 2,
     .dt = 0.02,
-    .Q = casadi::DM::diag({10.0, 150.0, 50.0}),
+    .Q = casadi::DM::diag({100.0, 150.0, 50.0}),
     .R = casadi::DM::diag({0.05, 0.05}),
   });
 
-  std::cout << "BYE" << std::endl;
   rec_.spawn().exit_on_failure();
 
   rec_.log_file_from_path(std::filesystem::path("rerun/turtle_nav.rbl"));
@@ -153,7 +147,7 @@ void TurtleNav::follow_path(
   );
 
   auto xy =
-    planar_trajectory(waypoints, static_cast<int>(waypoints.size()), 2, 2);
+    planar_trajectory(waypoints, static_cast<int>(waypoints.size()), 2, 2, 500);
 
   std::vector<rerun::LineStrip2D> ref;
 
