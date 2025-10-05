@@ -41,6 +41,7 @@ void TrajectoryTracker::init() {
     auto x_k = x_(casadi::Slice(), k);
     auto u_k = u_(casadi::Slice(), k);
 
+    // Euler integration
     auto x_next = x_k + unicycle_kinematics(x_k, u_k) * dt_;
 
     opti_.subject_to(x_(casadi::Slice(), k + 1) == x_next);

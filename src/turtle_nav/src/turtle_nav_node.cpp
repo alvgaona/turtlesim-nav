@@ -79,8 +79,6 @@ TurtleNav::TurtleNav() : Node("turtle_nav"), rec_("turtle_nav") {
 
   rec_.spawn().exit_on_failure();
 
-  rec_.log_file_from_path(std::filesystem::path("rerun/turtle_nav.rbl"));
-
   rec_.log(
     "world/frame",
     rerun::Arrows2D::from_vectors({{1.0, 0.0}, {0.0, 1.0}})
@@ -92,8 +90,8 @@ TurtleNav::TurtleNav() : Node("turtle_nav"), rec_("turtle_nav") {
 
   rec_.log(
     "world/landmarks",
-    rerun::Points2D({{0, 0}, {10, 10}, {5, 5}, {0, 10}, {10, 0}}
-    ).with_draw_order(1)
+    rerun::Points2D({{0, 0}, {10, 10}, {5, 5}, {0, 10}, {10, 0}})
+      .with_draw_order(1)
   );
 
   rec_.log(

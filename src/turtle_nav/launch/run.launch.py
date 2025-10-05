@@ -1,7 +1,5 @@
 from launch import LaunchDescription
 from launch_ros.actions import Node
-from launch.actions import DeclareLaunchArgument
-from launch.substitutions import LaunchConfiguration
 
 
 def generate_launch_description():
@@ -18,6 +16,6 @@ def generate_launch_description():
                 name="turtle_nav",
                 output="screen",
                 arguments=["--ros-args", "--log-level", "info"],
-            )
+            ),
         ]
     )
