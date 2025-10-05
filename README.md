@@ -58,20 +58,17 @@ You're good to go now. Let's run it.
 On one shell start up the nodes.
 
 ```text
-pixi run ros2 launch run.launch.py
+pixi run ros2 launch turtle_nav run.launch.py
 ```
 
 And on another shell
 
 ```text
-pixi run ros2 service call \
-  /turtle_nav/follow_path 'turtle_nav/srv/FollowPath' \
-  "{x: [5.544445, 9.0, 9.0], y: [5.544445, 7.0, 1.0], speed: 0.0}"
+pixi run ros2 service call /turtle_nav/follow_path 'turtle_nav/srv/FollowPath' "{x: [5.544445, 9.0, 9.0], y: [5.544445, 7.0, 1.0], speed: 0.0}"
 ```
 
 You can also choose to use the `/goto` service.
 
 ```text
-pixi run ros2 service call /turtle_nav/goto \
-  'turtle_nav/srv/GoTo' "{x: 1.0, y: 9.0, speed: 0.0}"
+pixi run ros2 service call /turtle_nav/goto 'turtle_nav/srv/GoTo' "{x: 1.0, y: 9.0, speed: 0.0}"
 ```
