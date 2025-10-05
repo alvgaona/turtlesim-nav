@@ -1,4 +1,5 @@
 {
     "venvPath": ".pixi/envs",
-    "venv": "default"
+    "venv": "default",
+    "reportMissingTypeStubs": false
 }
