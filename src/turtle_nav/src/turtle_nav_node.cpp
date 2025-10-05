@@ -166,9 +166,9 @@ void TurtleNav::follow_path(
 }
 
 void TurtleNav::go_to_callback() {
-  rec_.log("robot/state/x", rerun::Scalar(current_pose_->x));
-  rec_.log("robot/state/y", rerun::Scalar(current_pose_->y));
-  rec_.log("robot/state/orientation", rerun::Scalar(current_pose_->theta));
+  rec_.log("robot/state/x", rerun::Scalars(current_pose_->x));
+  rec_.log("robot/state/y", rerun::Scalars(current_pose_->y));
+  rec_.log("robot/state/orientation", rerun::Scalars(current_pose_->theta));
 
   real_traj_.emplace_back(current_pose_->x, current_pose_->y);
 
@@ -182,8 +182,8 @@ void TurtleNav::go_to_callback() {
 
   auto u_0 = u(casadi::Slice(), 0);
 
-  rec_.log("control/linear_velocity", rerun::Scalar(u_0(0).scalar()));
-  rec_.log("control/angular_velocity", rerun::Scalar(u_0(1).scalar()));
+  rec_.log("control/linear_velocity", rerun::Scalars(u_0(0).scalar()));
+  rec_.log("control/angular_velocity", rerun::Scalars(u_0(1).scalar()));
 
   geometry_msgs::msg::Twist message;
   message.linear.x = u_0(0).scalar();
@@ -193,9 +193,9 @@ void TurtleNav::go_to_callback() {
 }
 
 void TurtleNav::follow_path_callback() {
-  rec_.log("robot/state/x", rerun::Scalar(current_pose_->x));
-  rec_.log("robot/state/y", rerun::Scalar(current_pose_->y));
-  rec_.log("robot/state/orientation", rerun::Scalar(current_pose_->theta));
+  rec_.log("robot/state/x", rerun::Scalars(current_pose_->x));
+  rec_.log("robot/state/y", rerun::Scalars(current_pose_->y));
+  rec_.log("robot/state/orientation", rerun::Scalars(current_pose_->theta));
 
   real_traj_.emplace_back(current_pose_->x, current_pose_->y);
 
@@ -209,8 +209,8 @@ void TurtleNav::follow_path_callback() {
 
   auto u_0 = u(casadi::Slice(), 0);
 
-  rec_.log("control/linear_velocity", rerun::Scalar(u_0(0).scalar()));
-  rec_.log("control/angular_velocity", rerun::Scalar(u_0(1).scalar()));
+  rec_.log("control/linear_velocity", rerun::Scalars(u_0(0).scalar()));
+  rec_.log("control/angular_velocity", rerun::Scalars(u_0(1).scalar()));
 
   geometry_msgs::msg::Twist message;
   message.linear.x = u_0(0).scalar();
