@@ -27,7 +27,7 @@ class TrajectoryTracker {
 
   void set_target(const casadi::DM& r) { opti_.set_value(r_, r); }
 
-  void set_ref_traj(std::vector<rerun::Position2D>&& xy) {
+  void set_ref_traj(std::vector<rerun::Position2D>& xy) {
     auto xy_diff = diff(xy);
 
     auto angles = casadi::DM::atan2(

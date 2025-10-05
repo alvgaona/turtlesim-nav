@@ -159,7 +159,7 @@ void TurtleNav::follow_path(
 
   rec_.log("world/trajectory/ref", rerun::LineStrips2D(ref).with_draw_order(2));
 
-  trajectory_tracker_.set_ref_traj(std::move(xy));
+  trajectory_tracker_.set_ref_traj(xy);
 
   timer_ = this->create_wall_timer(25ms, [this]() { follow_path_callback(); });
   response->accepted = true;
