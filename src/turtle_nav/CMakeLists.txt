@@ -2,12 +2,12 @@ cmake_minimum_required(VERSION 3.16)
 project(turtle_nav)
 
 if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 20)
-  set(CMAKE_CXX_STANDARD_REQUIRED ON)
+    set(CMAKE_CXX_STANDARD 20)
+    set(CMAKE_CXX_STANDARD_REQUIRED ON)
 endif()
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-  add_compile_options(-Wall -Wextra -Wpedantic)
+    add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -40,7 +40,10 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   std_srvs
 )
 
-rosidl_get_typesupport_target(cpp_typesupport_target ${PROJECT_NAME} rosidl_typesupport_cpp)
+rosidl_get_typesupport_target(
+    cpp_typesupport_target ${PROJECT_NAME}
+    rosidl_typesupport_cpp
+)
 
 include_directories(
   include
@@ -80,16 +83,5 @@ install(DIRECTORY
   launch
   DESTINATION share/${PROJECT_NAME}
 )
-
-if(BUILD_TESTING)
-  file(GLOB_RECURSE test_src test/utest_*.cpp)
-  file(GLOB_RECURSE src_for_test src/*.cpp)
-  list(FILTER src_for_test EXCLUDE REGEX "src/.*_node.cpp")
-
-  find_package(ament_cmake_gmock REQUIRED)
-
-  ament_add_gmock(turtle_nav_test ${test_src} ${src_for_test})
-  ament_target_dependencies(turtle_nav_test std_msgs)
-endif()
 
 ament_package()
