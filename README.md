@@ -25,8 +25,8 @@ For more details, see this [post](https://alvgaona.com/posts/casadi-mpc-controll
 
 ## Visualization
 
-The visualization in this project is powered by [Rerun](https://rerun.io/), which must be installed before running
-the simulation. Once installed, the node utilizes Rerun to log and display data throughout
+The visualization in this project is powered by [Rerun](https://rerun.io/).
+The node utilizes Rerun to log and display data throughout
 the simulation process.
 
 > [!IMPORTANT]
