@@ -63,7 +63,7 @@ TurtleNav::TurtleNav() : Node("turtle_nav"), rec_("turtle_nav") {
     .horizon_length = 25,
     .state_dim = 3,
     .input_dim = 2,
-    .dt = 0.02,
+    .dt = 0.05,
     .Q = casadi::DM::diag({10.0, 150.0}),
     .R = casadi::DM::diag({0.05, 0.05}),
   });
@@ -72,7 +72,7 @@ TurtleNav::TurtleNav() : Node("turtle_nav"), rec_("turtle_nav") {
     .horizon_length = 25,
     .state_dim = 3,
     .input_dim = 2,
-    .dt = 0.02,
+    .dt = 0.05,
     .Q = casadi::DM::diag({100.0, 150.0, 50.0}),
     .R = casadi::DM::diag({0.05, 0.05}),
   });
@@ -121,7 +121,7 @@ void TurtleNav::go_to(
       .with_labels({"goal"})
   );
 
-  timer_ = this->create_wall_timer(25ms, [this]() { go_to_callback(); });
+  timer_ = this->create_wall_timer(50ms, [this]() { go_to_callback(); });
   response->accepted = true;
 }
 
@@ -161,7 +161,7 @@ void TurtleNav::follow_path(
 
   trajectory_tracker_.set_ref_traj(xy);
 
-  timer_ = this->create_wall_timer(25ms, [this]() { follow_path_callback(); });
+  timer_ = this->create_wall_timer(50ms, [this]() { follow_path_callback(); });
   response->accepted = true;
 }
 
