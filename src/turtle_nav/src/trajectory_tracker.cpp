@@ -47,6 +47,11 @@ void TrajectoryTracker::init() {
     opti_.subject_to(x_(casadi::Slice(), k + 1) == x_next);
   }
 
+  auto final_state_error = x_(casadi::Slice(), N_) - r_(casadi::Slice(), N_);
+  J += casadi::MX::mtimes(
+    casadi::MX::mtimes(final_state_error.T(), Q_), final_state_error
+  );
+
   opti_.minimize(J);
   opti_.subject_to(x_(casadi::Slice(), 0) == x0_);
   opti_.subject_to(u_(0, casadi::Slice()) >= 0);
