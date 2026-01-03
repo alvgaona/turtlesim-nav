@@ -1,4 +1,4 @@
-[project]
+[workspace]
 name = "turtle-nav"
 version = "0.1.0"
 description = "UPM Programming Aerial Robotics Assignment I"
@@ -50,3 +50,4 @@ rerun-sdk = ">=0.23.1,<0.24"
 
 [activation]
 scripts = ["install/setup.sh"]
+

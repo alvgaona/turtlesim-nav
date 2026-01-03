@@ -1,6 +1,6 @@
 # TurtleSim Nav
 
-https://github.com/user-attachments/assets/4f7f2ef3-c4e4-4324-9834-b4eed234d826
+<https://github.com/user-attachments/assets/4f7f2ef3-c4e4-4324-9834-b4eed234d826>
 
 This project implements two robotic motion controllers using ROS2 and the `turtlesim` package.
 The first controller enables point-to-point navigation, allowing the turtle to reach a desired target
@@ -13,10 +13,11 @@ The second controller focuses on path tracking and is accessible via the `/follo
 ## Model Predictive Control
 
 The project utilizes a Nonlinear Model Predictive Control (NMPC) approach.
-While both controllers share a standard NMPC implementation as their foundation,
-they differ in several key aspects of their operation and configuration.
+While both, point stabilization and path following, controllers share a standard NMPC
+implementation as their foundation, they differ in several key aspects of their operation
+and configuration.
 
-The controller implementation relies on a mathematical unicycle model, which can be readily adapted
+The controller implementation relies on a mathematical unicycle kinematics model, which can be readily adapted
 to function as a differential-drive system.
 
 The foundation for this implementation comes from a previous simulation that focused on mathematical
@@ -64,7 +65,7 @@ pixi run ros2 launch turtle_nav run.launch.py
 And on another shell
 
 ```text
-pixi run ros2 service call /turtle_nav/follow_path 'turtle_nav/srv/FollowPath' "{x: [5.544445, 9.0, 9.0], y: [5.544445, 7.0, 1.0], speed: 0.0}"
+pixi run ros2 service call /turtle_nav/follow_path 'turtle_nav/srv/FollowPath' "{x: [5.544445, 9.0, 9.0], y: [5.544445, 7.0, 1.0], speed: 0.5}"
 ```
 
 You can also choose to use the `/goto` service.

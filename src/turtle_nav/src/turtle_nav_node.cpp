@@ -4,6 +4,7 @@
 
 #include <casadi/casadi.hpp>
 #include <casadi/core/optistack.hpp>
+#include <cmath>
 #include <cstddef>
 #include <cstdlib>
 #include <memory>
@@ -69,12 +70,12 @@ TurtleNav::TurtleNav() : Node("turtle_nav"), rec_("turtle_nav") {
   });
 
   trajectory_tracker_ = TrajectoryTracker({
-    .horizon_length = 25,
-    .state_dim = 3,
-    .input_dim = 2,
+    .horizon_length = 20,
+    .state_dim = 3,  // [x, y, θ]
+    .input_dim = 2,  // [v, ω]
     .dt = 0.05,
-    .Q = casadi::DM::diag({100.0, 150.0, 50.0}),
-    .R = casadi::DM::diag({0.05, 0.05}),
+    .Q = casadi::DM::diag({1000.0, 1000.0, 50.0}),  // Match MATLAB
+    .R = casadi::DM::diag({100.0, 100.0}),            // Match MATLAB
   });
 
   rec_.spawn().exit_on_failure();
@@ -129,12 +130,14 @@ void TurtleNav::follow_path(
   const std::shared_ptr<turtle_nav::srv::FollowPath::Request>& request,
   const std::shared_ptr<turtle_nav::srv::FollowPath::Response>& response
 ) {
+  double average_speed = (request->speed > 0.0) ? request->speed : 1.0;
+
+  // Build waypoints from request
   std::vector<rerun::Position2D> waypoints;
   waypoints.reserve(request->x.size());
   for (size_t i = 0; i < request->x.size(); ++i) {
     waypoints.emplace_back(request->x[i], request->y[i]);
   }
-  [[maybe_unused]] double speed = request->speed;
 
   rec_.log(
     "world/trajectory/control_points",
@@ -144,11 +147,14 @@ void TurtleNav::follow_path(
       .with_draw_order(2)
   );
 
-  auto xy =
-    planar_trajectory(waypoints, static_cast<int>(waypoints.size()), 2, 2, 500);
+  // Generate spline trajectory (fixed number of samples)
+  constexpr int num_samples = 500;
+  auto xy = planar_trajectory(
+    waypoints, static_cast<int>(waypoints.size()), 2, 2, num_samples
+  );
 
+  // Visualize reference trajectory
   std::vector<rerun::LineStrip2D> ref;
-
   for (size_t i = 0; i < xy.size() - 1; i++) {
     auto curr = xy[i];
     auto next = xy[i + 1];
@@ -156,10 +162,11 @@ void TurtleNav::follow_path(
       rerun::LineStrip2D({{curr.x(), curr.y()}, {next.x(), next.y()}})
     );
   }
-
   rec_.log("world/trajectory/ref", rerun::LineStrips2D(ref).with_draw_order(2));
 
+  trajectory_tracker_.reset();
   trajectory_tracker_.set_ref_traj(xy);
+  trajectory_tracker_.set_v_ref(average_speed);
 
   timer_ = this->create_wall_timer(50ms, [this]() { follow_path_callback(); });
   response->accepted = true;
@@ -201,6 +208,7 @@ void TurtleNav::follow_path_callback() {
 
   rec_.log("world/robot/xy", rerun::Points2D(real_traj_));
 
+  // Pass state: [x, y, θ]
   casadi::DM u = trajectory_tracker_.step(casadi::DM({
     current_pose_->x,
     current_pose_->y,
@@ -208,14 +216,22 @@ void TurtleNav::follow_path_callback() {
   }));
 
   auto u_0 = u(casadi::Slice(), 0);
+  double v = u_0(0).scalar();
+  double omega = u_0(1).scalar();
 
-  rec_.log("control/linear_velocity", rerun::Scalars(u_0(0).scalar()));
-  rec_.log("control/angular_velocity", rerun::Scalars(u_0(1).scalar()));
+  // Dead zone: force zero velocity when at goal to prevent drift
+  if (trajectory_tracker_.reached_goal(current_pose_->x, current_pose_->y)) {
+    v = 0.0;
+    omega = 0.0;
+  }
+
+  rec_.log("control/linear_velocity", rerun::Scalars(v));
+  rec_.log("control/angular_velocity", rerun::Scalars(omega));
 
   geometry_msgs::msg::Twist message;
-  message.linear.x = u_0(0).scalar();
+  message.linear.x = v;
   message.linear.y = 0.0;
-  message.angular.z = u_0(1).scalar();
+  message.angular.z = omega;
   publisher_->publish(message);
 }
 
@@ -225,3 +241,4 @@ int main(const int argc, char* argv[]) {
   rclcpp::shutdown();
   return 0;
 }
+

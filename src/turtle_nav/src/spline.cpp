@@ -29,3 +29,4 @@ std::vector<rerun::Position2D> planar_trajectory(
 
   return xy;
 };
+
